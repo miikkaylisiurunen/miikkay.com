@@ -1,0 +1,14 @@
+[
+  {
+    "header": "Languages",
+    "list": ["JavaScript / Node.js", "TypeScript", "HTML", "CSS", "Sass", "SQL", "C++", "Python"]
+  },
+  {
+    "header": "Libraries",
+    "list": ["React", "Express", "Next.js", "node-postgres", "Mongoose", "Tailwind CSS"]
+  },
+  {
+    "header": "Others",
+    "list": ["PostgreSQL", "Git", "Docker", "MongoDB", "WebSocket", "Figma"]
+  }
+]

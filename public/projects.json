@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Chat app",
+    "imagePath": "/viest.png",
+    "quality": 20,
+    "description": "A real-time messaging app.",
+    "tech": ["React", "Express", "PostgreSQL", "WebSocket"],
+    "link": "https://chat.miikkay.com"
+  },
+  {
+    "name": "Image sharing site",
+    "imagePath": "/image-sharing.png",
+    "quality": 20,
+    "description": "Share images with other people.",
+    "tech": ["React", "Express", "MongoDB"],
+    "link": "https://images.miikkay.com"
+  },
+  {
+    "name": "Airdate",
+    "imagePath": "/airdate.png",
+    "quality": 30,
+    "description": "See when new episodes of your favorite TV shows are coming out.",
+    "tech": ["React", "Express", "PostgreSQL"],
+    "link": "https://airdate.miikkay.com"
+  },
+  {
+    "name": "Message app",
+    "imagePath": "/message-app.png",
+    "quality": 80,
+    "description": "Create password protected messages and links.",
+    "tech": ["React", "Express", "MongoDB"],
+    "link": "https://message.miikkay.com"
+  },
+  {
+    "name": "Watcheo",
+    "imagePath": "/watcheo.png",
+    "quality": 30,
+    "description": "Keep track of movies and TV shows you've watched.",
+    "tech": ["React", "Express", "MongoDB"],
+    "link": "https://watcheo.miikkay.com"
+  },
+  {
+    "name": "miikkay.com",
+    "description": "My portfolio website.",
+    "tech": ["Next.js"],
+    "link": "https://miikkay.com"
+  }
+]
