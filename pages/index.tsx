@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { useTheme } from 'next-themes';
 import ThemeToggle from 'components/ThemeToggle';
 import Section from 'components/Section';
 import Paragraph from 'components/Paragraph';
@@ -11,11 +12,17 @@ import skills from 'public/skills.json';
 import projects from 'public/projects.json';
 
 const Home: NextPage = () => {
+  const { resolvedTheme } = useTheme();
+
   return (
     <div className="flex justify-center py-8 px-8 sm:py-14 sm:px-12 md:py-20">
       <Head>
         <title>Miikka Ylisiurunen</title>
         <meta name="description" content="Software engineer interested in web development." />
+        <meta
+          name="theme-color"
+          content={resolvedTheme === 'dark' ? 'rgb(23,23,23)' : 'rgb(249,250,251)'}
+        />
       </Head>
 
       <main className="max-w-2xl flex flex-col space-y-8 sm:space-y-12">
