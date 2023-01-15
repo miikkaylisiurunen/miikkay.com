@@ -20,7 +20,6 @@ const ProjectCard = ({ details }: Props) => {
       href={details.link}
       target="_blank"
       rel="noreferrer"
-      key={details.name}
     >
       <div>
         <div className="w-full h-40 bg-zinc-100 shadow-inner overflow-hidden relative rounded-lg mb-4 [-webkit-transform:translate3d(0,0,0)] dark:bg-zinc-900">
