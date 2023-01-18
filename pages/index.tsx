@@ -10,6 +10,7 @@ import SkillPill from 'components/SkillPill';
 import Subheader from 'components/Subheader';
 import skills from 'public/skills.json';
 import projects from 'public/projects.json';
+import CustomLink from 'components/CustomLink';
 
 const Home: NextPage = () => {
   const { resolvedTheme } = useTheme();
@@ -69,14 +70,9 @@ const Home: NextPage = () => {
             </div>
             <Paragraph>
               During my month-long internship at Tampere University of Applied Sciences, I created a{' '}
-              <a
-                className="underline text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500 transition-colors"
-                href="https://chat.miikkay.com"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <CustomLink href="https://chat.miikkay.com" external>
                 real-time messaging service
-              </a>{' '}
+              </CustomLink>{' '}
               I had designed. The frontend is written in React and uses Socket.io for handling
               messages. The backend is written in Node.js using Express, PostgreSQL, and Socket.io.
             </Paragraph>
