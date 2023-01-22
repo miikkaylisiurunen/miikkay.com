@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# block project images from appearing in google images
+Disallow: /_next/image?url=/images/project/
