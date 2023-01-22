@@ -1,7 +1,7 @@
 [
   {
     "name": "Chat app",
-    "imagePath": "/viest.png",
+    "imagePath": "/images/project/viest.png",
     "quality": 20,
     "description": "A real-time messaging app.",
     "tech": ["React", "Express", "PostgreSQL", "WebSocket"],
@@ -9,7 +9,7 @@
   },
   {
     "name": "Image sharing site",
-    "imagePath": "/image-sharing.png",
+    "imagePath": "/images/project/image-sharing.png",
     "quality": 20,
     "description": "Share images with other people.",
     "tech": ["React", "Express", "MongoDB"],
@@ -17,7 +17,7 @@
   },
   {
     "name": "Airdate",
-    "imagePath": "/airdate.png",
+    "imagePath": "/images/project/airdate.png",
     "quality": 30,
     "description": "See when new episodes of your favorite TV shows are coming out.",
     "tech": ["React", "Express", "PostgreSQL"],
@@ -25,7 +25,7 @@
   },
   {
     "name": "Message app",
-    "imagePath": "/message-app.png",
+    "imagePath": "/images/project/message-app.png",
     "quality": 80,
     "description": "Create password protected messages and links.",
     "tech": ["React", "Express", "MongoDB"],
@@ -33,7 +33,7 @@
   },
   {
     "name": "Watcheo",
-    "imagePath": "/watcheo.png",
+    "imagePath": "/images/project/watcheo.png",
     "quality": 30,
     "description": "Keep track of movies and TV shows you've watched.",
     "tech": ["React", "Express", "MongoDB"],

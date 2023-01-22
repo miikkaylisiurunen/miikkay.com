@@ -8,8 +8,8 @@ import Header from 'components/Header';
 import ProjectCard from 'components/ProjectCard';
 import SkillPill from 'components/SkillPill';
 import Subheader from 'components/Subheader';
-import skills from 'public/skills.json';
-import projects from 'public/projects.json';
+import skills from 'json/skills.json';
+import projects from 'json/projects.json';
 import CustomLink from 'components/CustomLink';
 
 const Home: NextPage = () => {
