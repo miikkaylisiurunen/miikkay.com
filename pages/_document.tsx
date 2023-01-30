@@ -4,10 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Fira+Code&display=swap"
-          rel="stylesheet"
-        />
         <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
         <link rel="shortcut icon" href="/static/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
