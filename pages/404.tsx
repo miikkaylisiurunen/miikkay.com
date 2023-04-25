@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useTheme } from 'next-themes';
-import CustomLink from 'components/CustomLink';
+import InlineLink from 'components/InlineLink';
 import Paragraph from 'components/Paragraph';
 
 export default function Custom404() {
@@ -23,7 +23,7 @@ export default function Custom404() {
           <Paragraph>This page could not be found.</Paragraph>
         </div>
         <div className="text-center">
-          <CustomLink href="/">Return home</CustomLink>
+          <InlineLink href="/">Return home</InlineLink>
         </div>
       </div>
     </div>

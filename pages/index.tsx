@@ -10,7 +10,7 @@ import SkillPill from 'components/SkillPill';
 import Subheader from 'components/Subheader';
 import skills from 'json/skills.json';
 import projects from 'json/projects.json';
-import CustomLink from 'components/CustomLink';
+import InlineLink from 'components/InlineLink';
 
 const Home: NextPage = () => {
   const { resolvedTheme } = useTheme();
@@ -72,9 +72,9 @@ const Home: NextPage = () => {
             </div>
             <Paragraph>
               During my month-long internship at Tampere University of Applied Sciences, I created a{' '}
-              <CustomLink href="https://chat.miikkay.com" external>
+              <InlineLink href="https://chat.miikkay.com" external>
                 real-time messaging service
-              </CustomLink>{' '}
+              </InlineLink>{' '}
               I had designed. The frontend is written in React and uses Socket.io for handling
               messages. The backend is written in Node.js using Express, PostgreSQL, and Socket.io.
             </Paragraph>
