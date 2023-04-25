@@ -5,14 +5,14 @@ const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
-  // Wait until mounted to avoid hydration mismatch error with `resolvedTheme` being undefined
+  // wait until mounted to avoid hydration mismatch error with `resolvedTheme` being undefined
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
   const correctClasses = (theme: 'dark' | 'light') => {
     const defaultClasses =
-      'hover:bg-gray-200 cursor-pointer px-2 py-1 rounded-md transition-colors dark:hover:bg-neutral-800';
-    const selectedClasses = 'font-bold text-zinc-900 dark:text-zinc-50';
+      'hover:bg-gray-200 cursor-pointer px-2 py-1 rounded-md transition-[background-color] dark:hover:bg-[#1b1e22]';
+    const selectedClasses = 'font-bold text-zinc-800 dark:text-zinc-200';
 
     if (theme === resolvedTheme) {
       return `${defaultClasses} ${selectedClasses}`;

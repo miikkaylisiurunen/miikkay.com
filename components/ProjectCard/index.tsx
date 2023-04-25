@@ -16,13 +16,13 @@ type Props = {
 const ProjectCard = ({ details }: Props) => {
   return (
     <a
-      className="p-4 bg-white flex-1 rounded-lg flex flex-col justify-between group transition-transform cursor-pointer shadow-[0_8px_16px_rgb(209_213_219/0.5)] hover:scale-[1.03] sm:hover:scale-105 dark:bg-zinc-800 dark:shadow-[0_8px_16px_rgb(0_0_0/0.2)]"
+      className="p-4 bg-white flex-1 rounded-lg flex flex-col justify-between group transition-transform cursor-pointer shadow-[0_8px_16px_rgb(209_213_219/0.5)] hover:scale-[1.03] sm:hover:scale-105 dark:bg-[#121418] dark:shadow-[0_8px_16px_rgb(0_0_0/0.2)]"
       href={details.link}
       target="_blank"
       rel="noreferrer"
     >
       <div>
-        <div className="w-full h-40 bg-zinc-100 shadow-inner overflow-hidden relative rounded-lg mb-4 [-webkit-transform:translate3d(0,0,0)] dark:bg-zinc-900">
+        <div className="w-full h-40 bg-zinc-100 shadow-inner overflow-hidden relative rounded-lg mb-4 [-webkit-transform:translate3d(0,0,0)] dark:bg-zinc-950">
           {details.imagePath && (
             <Image
               fill

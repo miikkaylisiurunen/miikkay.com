@@ -16,7 +16,7 @@ const firaCode = Fira_Code({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" disableTransitionOnChange>
       <div className={`${inter.variable} ${firaCode.variable} font-sans`}>
         <Component {...pageProps} />
       </div>
