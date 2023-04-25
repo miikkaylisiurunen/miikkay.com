@@ -57,7 +57,7 @@ const Home: NextPage = () => {
           <div className="leading-snug">
             <Subheader>Tampere University of Applied Sciences</Subheader>
             <Paragraph>Bachelor of Engineering, Software Engineering</Paragraph>
-            <p className="text-zinc-500 text-base font-normal">2021 - (2025)</p>
+            <Paragraph dim>2021 - (2025)</Paragraph>
           </div>
         </Section>
 
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
           <div className="space-y-1">
             <div className="leading-snug">
               <Subheader>Tampere University of Applied Sciences</Subheader>
-              <p className="text-zinc-500 text-base font-normal">05/2022</p>
+              <Paragraph dim>05/2022</Paragraph>
             </div>
             <Paragraph>
               During my month-long internship at Tampere University of Applied Sciences, I created a{' '}
