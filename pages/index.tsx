@@ -26,11 +26,13 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <main className="max-w-2xl flex flex-col space-y-8 sm:space-y-12">
+      <main className="max-w-3xl flex flex-col space-y-8 sm:space-y-12">
         <div className="flex justify-between font-normal text-zinc-600 dark:text-zinc-400">
           <a
             className="hover:bg-gray-200 cursor-pointer px-2 py-1 -mx-2 rounded-md transition-[background-color] dark:hover:bg-[#1b1e22]"
             href="https://github.com/miikkaylisiurunen"
+            target="_blank"
+            rel="noreferrer"
           >
             GitHub
           </a>

@@ -1,48 +1,44 @@
 [
   {
+    "name": "Node.js API template",
+    "description": "A Node.js API template with Express, TypeScript and PostgreSQL.",
+    "tech": ["Express", "PostgreSQL", "TypeScript", "Docker", "Jest"],
+    "link": "https://github.com/miikkaylisiurunen/template-node-express"
+  },
+  {
     "name": "Chat app",
-    "imagePath": "/images/project/viest.png",
-    "quality": 20,
-    "description": "A real-time messaging app.",
+    "description": "Real-time messaging service with one-on-one conversations, account creation and message history.",
     "tech": ["React", "Express", "PostgreSQL", "WebSocket"],
     "link": "https://chat.miikkay.com"
   },
   {
     "name": "Image sharing site",
-    "imagePath": "/images/project/image-sharing.png",
-    "quality": 20,
-    "description": "Share images with other people.",
+    "description": "A photo-sharing site with user accounts and image uploads.",
     "tech": ["React", "Express", "MongoDB"],
     "link": "https://images.miikkay.com"
   },
   {
     "name": "Airdate",
-    "imagePath": "/images/project/airdate.png",
-    "quality": 30,
-    "description": "See when new episodes of your favorite TV shows are coming out.",
+    "description": "Stay up-to-date with the schedule of your favorite TV shows.",
     "tech": ["React", "Express", "PostgreSQL"],
     "link": "https://airdate.miikkay.com"
   },
   {
-    "name": "Message app",
-    "imagePath": "/images/project/message-app.png",
-    "quality": 80,
-    "description": "Create password protected messages and links.",
+    "name": "Secure text sharing",
+    "description": "Create secure links to share password-protected text content.",
     "tech": ["React", "Express", "MongoDB"],
     "link": "https://message.miikkay.com"
   },
   {
-    "name": "Watcheo",
-    "imagePath": "/images/project/watcheo.png",
-    "quality": 30,
-    "description": "Keep track of movies and TV shows you've watched.",
+    "name": "Movie tracker",
+    "description": "Track your watched movies and shows with ratings and notes.",
     "tech": ["React", "Express", "MongoDB"],
     "link": "https://watcheo.miikkay.com"
   },
   {
     "name": "miikkay.com",
-    "description": "My portfolio website.",
+    "description": "My portfolio built with Next.js and Tailwind CSS.",
     "tech": ["Next.js"],
-    "link": "https://miikkay.com"
+    "link": "https://github.com/miikkaylisiurunen/miikkay.com"
   }
 ]

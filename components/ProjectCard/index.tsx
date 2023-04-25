@@ -1,12 +1,10 @@
-import Image from 'next/image';
-import React from 'react';
+import { useRef } from 'react';
 import Subheader from 'components/Subheader';
+import { GithubIcon, LinkIcon } from 'components/icons';
 
 type Props = {
   details: {
     name: string;
-    imagePath?: string;
-    quality?: number;
     description: string;
     tech: string[];
     link: string;
@@ -14,38 +12,63 @@ type Props = {
 };
 
 const ProjectCard = ({ details }: Props) => {
+  const cardRef = useRef<HTMLAnchorElement>(null);
+  const glowRef = useRef<HTMLDivElement>(null);
+
+  // add glow effect to card
+  const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    // get the card and glow elements and return if they don't exist
+    const card = cardRef.current;
+    const glow = glowRef.current;
+    if (!card || !glow) return;
+
+    // get the bounding rectangle of the card element
+    // and calculate the position of the mouse relative to the card
+    const rect = card.getBoundingClientRect();
+    const leftX = e.clientX - rect.x;
+    const topY = e.clientY - rect.y;
+    const percentageX = (leftX / rect.width) * 100;
+    const percentageY = (topY / rect.height) * 100;
+
+    // apply a radial gradient to the glow element to create a glow effect
+    glow.style.backgroundImage = `
+      radial-gradient(
+        circle at
+        ${percentageX}%
+        ${percentageY}%,
+        #3b82f615,
+        #00000000
+      )
+    `;
+  };
+
   return (
     <a
-      className="p-4 bg-white flex-1 rounded-lg flex flex-col justify-between group transition-transform cursor-pointer shadow-[0_8px_16px_rgb(209_213_219/0.5)] hover:scale-[1.03] sm:hover:scale-105 dark:bg-[#121418] dark:shadow-[0_8px_16px_rgb(0_0_0/0.2)]"
+      className="relative p-6 space-y-6 rounded-lg flex flex-1 flex-col justify-between cursor-pointer overflow-hidden bg-white dark:bg-[#121418] border border-gray-300 dark:border-gray-50/10 transition-[border] ease-out duration-150 group hover:border-zinc-600 dark:hover:border-blue-200/50"
       href={details.link}
       target="_blank"
       rel="noreferrer"
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
     >
-      <div>
-        <div className="w-full h-40 bg-zinc-100 shadow-inner overflow-hidden relative rounded-lg mb-4 [-webkit-transform:translate3d(0,0,0)] dark:bg-zinc-950">
-          {details.imagePath && (
-            <Image
-              fill
-              src={details.imagePath}
-              alt={`${details.name} landing page`}
-              quality={details.quality || 50}
-              sizes="(max-width: 640px) 90vw,
-                  (max-width: 768px) 50vw,
-                  (max-width: 1536px) 33vw,
-                  15vw"
-              className="object-cover object-top transition-transform group-hover:scale-105 sm:group-hover:scale-110"
-            />
-          )}
-          <div className="absolute w-full pointer-events-none h-full rounded-lg z-50 shadow-[inset_0_0_16px_rgba(0,0,0,0.1)] dark:shadow-[inset_0_0_16px_rgba(0,0,0,0.3)]"></div>
-        </div>
-        <div className="leading-snug">
+      <div className="flex flex-col space-y-6">
+        {details.link.includes('github.com') ? (
+          <GithubIcon className="text-blue-500" />
+        ) : (
+          <LinkIcon className="text-blue-500" />
+        )}
+        <div>
           <Subheader ellipsis>{details.name}</Subheader>
-          <p className="text-zinc-600 leading-snug text-sm dark:text-zinc-400">
+          <p className="text-zinc-600 leading-snug text-sm dark:text-zinc-400 mt-1">
             {details.description}
           </p>
         </div>
       </div>
-      <span className="text-xs text-zinc-500 mt-4 leading-snug">{details.tech.join(' • ')}</span>
+      <span className="text-xs text-zinc-500 leading-snug">{details.tech.join(' • ')}</span>
+      <div
+        className="absolute w-full h-full left-0 top-0 !m-0 duration-150 transition-opacity ease-out pointer-events-none opacity-0 motion-safe:group-hover:opacity-100"
+        ref={glowRef}
+      ></div>
     </a>
   );
 };

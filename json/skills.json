@@ -5,7 +5,7 @@
   },
   {
     "header": "Libraries",
-    "list": ["React", "Express", "Next.js", "node-postgres", "Mongoose", "Tailwind CSS"]
+    "list": ["React", "Express", "Next.js", "node-postgres", "Jest", "Tailwind CSS", "Mongoose"]
   },
   {
     "header": "Others",
