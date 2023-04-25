@@ -1,6 +1,6 @@
 import { useRef } from 'react';
-import Subheader from 'components/Subheader';
-import { GithubIcon, LinkIcon } from 'components/Icons';
+import Subheader from './Subheader';
+import { GithubIcon, LinkIcon } from './Icons';
 
 type Props = {
   details: {

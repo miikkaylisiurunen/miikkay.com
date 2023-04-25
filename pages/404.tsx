@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useTheme } from 'next-themes';
-import InlineLink from 'components/InlineLink';
-import Paragraph from 'components/Paragraph';
+import InlineLink from '@/components/InlineLink';
+import Paragraph from '@/components/Paragraph';
 
 export default function Custom404() {
   const { resolvedTheme } = useTheme();

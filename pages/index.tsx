@@ -1,16 +1,16 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useTheme } from 'next-themes';
-import ThemeToggle from 'components/ThemeToggle';
-import Section from 'components/Section';
-import Paragraph from 'components/Paragraph';
-import Header from 'components/Header';
-import ProjectCard from 'components/ProjectCard';
-import SkillPill from 'components/SkillPill';
-import Subheader from 'components/Subheader';
-import skills from 'json/skills.json';
-import projects from 'json/projects.json';
-import InlineLink from 'components/InlineLink';
+import ThemeToggle from '@/components/ThemeToggle';
+import Section from '@/components/Section';
+import Paragraph from '@/components/Paragraph';
+import Header from '@/components/Header';
+import ProjectCard from '@/components/ProjectCard';
+import SkillPill from '@/components/SkillPill';
+import Subheader from '@/components/Subheader';
+import skills from '@/json/skills.json';
+import projects from '@/json/projects.json';
+import InlineLink from '@/components/InlineLink';
 
 const Home: NextPage = () => {
   const { resolvedTheme } = useTheme();
