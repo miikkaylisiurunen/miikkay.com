@@ -1,6 +1,4 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useTheme } from 'next-themes';
 import ThemeToggle from '@/components/ThemeToggle';
 import Section from '@/components/Section';
 import Paragraph from '@/components/Paragraph';
@@ -11,20 +9,12 @@ import Subheader from '@/components/Subheader';
 import skills from '@/json/skills.json';
 import projects from '@/json/projects.json';
 import InlineLink from '@/components/InlineLink';
+import MetaTags from '@/components/MetaTags';
 
 const Home: NextPage = () => {
-  const { resolvedTheme } = useTheme();
-
   return (
     <div className="flex justify-center py-8 px-8 sm:py-14 sm:px-12 md:py-20">
-      <Head>
-        <title>Miikka Ylisiurunen</title>
-        <meta name="description" content="Software engineer interested in web development." />
-        <meta
-          name="theme-color"
-          content={resolvedTheme === 'dark' ? 'rgb(12,14,17)' : 'rgb(249,250,251)'}
-        />
-      </Head>
+      <MetaTags />
 
       <main className="max-w-3xl flex flex-col space-y-8 sm:space-y-12">
         <div className="flex justify-between font-normal text-zinc-600 dark:text-zinc-400">

@@ -1,20 +1,11 @@
-import Head from 'next/head';
-import { useTheme } from 'next-themes';
 import InlineLink from '@/components/InlineLink';
 import Paragraph from '@/components/Paragraph';
+import MetaTags from '@/components/MetaTags';
 
 export default function Custom404() {
-  const { resolvedTheme } = useTheme();
-
   return (
     <div className="h-screen flex flex-col items-center justify-center p-6">
-      <Head>
-        <title>404 - Miikka Ylisiurunen</title>
-        <meta
-          name="theme-color"
-          content={resolvedTheme === 'dark' ? 'rgb(12,14,17)' : 'rgb(249,250,251)'}
-        />
-      </Head>
+      <MetaTags title="Page not found" description="" openGraph={false} />
 
       <div className="space-y-6">
         <div className="flex space-x-5 justify-center items-center">
