@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
+import { MoonIcon, SunIcon } from './Icons';
 
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
@@ -9,28 +10,17 @@ const ThemeToggle = () => {
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  const correctClasses = (theme: 'dark' | 'light') => {
-    const defaultClasses =
-      'hover:bg-gray-200 cursor-pointer px-2 py-1 rounded-md transition-[background-color] dark:hover:bg-[#1b1e22]';
-    const selectedClasses = 'font-bold text-zinc-800 dark:text-zinc-200';
-
-    if (theme === resolvedTheme) {
-      return `${defaultClasses} ${selectedClasses}`;
-    }
-
-    return defaultClasses;
-  };
-
   return (
-    <div className="flex items-center -mx-2">
-      <button className={correctClasses('light')} onClick={() => setTheme('light')}>
-        Light
-      </button>
-      <span className="mx-1">/</span>
-      <button className={correctClasses('dark')} onClick={() => setTheme('dark')}>
-        Dark
-      </button>
-    </div>
+    <button
+      className="cursor-pointer text-zinc-400 bg-white p-2.5 border border-gray-300 hover:border-zinc-400 hover:bg-gray-50 dark:border-zinc-400/20 rounded-lg dark:bg-cardBackground dark:hover:bg-cardBackground-lighter dark:hover:border-zinc-600 transition-colors"
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+    >
+      {resolvedTheme === 'dark' ? (
+        <MoonIcon className="w-5 h-5" />
+      ) : (
+        <SunIcon className="w-5 h-5" />
+      )}
+    </button>
   );
 };
 

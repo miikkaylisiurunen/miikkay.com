@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import Subheader from './Subheader';
 import { GithubIcon, LinkIcon } from './Icons';
+import { useTheme } from 'next-themes';
 
 type Props = {
   details: {
@@ -12,6 +13,7 @@ type Props = {
 };
 
 const ProjectCard = ({ details }: Props) => {
+  const { resolvedTheme } = useTheme();
   const cardRef = useRef<HTMLAnchorElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
 
@@ -31,12 +33,13 @@ const ProjectCard = ({ details }: Props) => {
     const percentageY = (topY / rect.height) * 100;
 
     // apply a radial gradient to the glow element to create a glow effect
+    const color = resolvedTheme === 'dark' ? 'rgba(255, 255, 255, 0.03)' : 'rgba(0, 0, 0, 0.03)';
     glow.style.backgroundImage = `
       radial-gradient(
         circle at
         ${percentageX}%
         ${percentageY}%,
-        #3b82f615,
+        ${color},
         #00000000
       )
     `;
@@ -44,7 +47,7 @@ const ProjectCard = ({ details }: Props) => {
 
   return (
     <a
-      className="relative p-6 space-y-6 rounded-lg flex flex-1 flex-col justify-between cursor-pointer overflow-hidden bg-white dark:bg-[#121418] border border-gray-300 dark:border-gray-50/10 transition-[border] ease-out duration-150 group hover:border-zinc-600 dark:hover:border-blue-200/50"
+      className="relative p-6 space-y-6 rounded-lg flex flex-1 flex-col justify-between cursor-pointer overflow-hidden bg-white dark:bg-cardBackground border border-gray-300 dark:border-zinc-400/20 transition-[border] ease-out duration-150 group hover:border-zinc-600 dark:hover:border-blue-200/50"
       href={details.link}
       target="_blank"
       rel="noreferrer"
@@ -64,7 +67,16 @@ const ProjectCard = ({ details }: Props) => {
           </p>
         </div>
       </div>
-      <span className="text-xs text-zinc-500 leading-snug">{details.tech.join(' • ')}</span>
+      <div className="text-xs text-zinc-500 font-mono">
+        {details.tech.map((tech) => (
+          <span
+            key={tech}
+            className='after:content-["•"] after:inline-block after:mx-1 last:after:content-[""] last:after:hidden'
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
       <div
         className="absolute w-full h-full left-0 top-0 !m-0 duration-150 transition-opacity ease-out pointer-events-none opacity-0 motion-safe:group-hover:opacity-100"
         ref={glowRef}

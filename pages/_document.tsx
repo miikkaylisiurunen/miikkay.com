@@ -12,7 +12,7 @@ export default function Document() {
         <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#2d89ef" />
         <meta name="msapplication-TileColor" content="#2d89ef" />
       </Head>
-      <body className="bg-gray-50 dark:bg-[#0C0E11]">
+      <body className="bg-gray-50 dark:bg-background antialiased">
         <Main />
         <NextScript />
       </body>

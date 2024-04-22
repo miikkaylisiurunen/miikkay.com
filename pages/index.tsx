@@ -10,16 +10,18 @@ import skills from '@/json/skills.json';
 import projects from '@/json/projects.json';
 import InlineLink from '@/components/InlineLink';
 import MetaTags from '@/components/MetaTags';
+import InlineCode from '@/components/InlineCode';
+import Divider from '@/components/Divider';
 
 const Home: NextPage = () => {
   return (
-    <div className="flex justify-center py-8 px-8 sm:py-14 sm:px-12 md:py-20">
+    <div className="flex justify-center py-8 px-8 sm:py-14 sm:px-12 md:py-20 relative">
       <MetaTags />
 
       <main className="max-w-3xl flex flex-col space-y-8 sm:space-y-12">
-        <div className="flex justify-between font-normal text-zinc-600 dark:text-zinc-400">
+        <div className="flex justify-between items-center font-normal text-zinc-600 dark:text-zinc-400">
           <a
-            className="hover:bg-gray-200 cursor-pointer px-2 py-1 -mx-2 rounded-md transition-[background-color] dark:hover:bg-[#1b1e22]"
+            className="hover:bg-gray-200 cursor-pointer px-2 py-1 -mx-2 rounded-md transition-[background-color] dark:hover:bg-cardBackground-lighter"
             href="https://github.com/miikkaylisiurunen"
             target="_blank"
             rel="noreferrer"
@@ -31,35 +33,37 @@ const Home: NextPage = () => {
 
         <Section>
           <div>
-            <h1 className="font-black text-4xl text-zinc-800 dark:text-zinc-200 sm:text-5xl">
+            <h1 className="font-bold tracking-normal text-4xl text-zinc-800 dark:text-zinc-200">
               Miikka Ylisiurunen
             </h1>
             <h2 className="text-zinc-500 font-normal">Software Engineer</h2>
           </div>
           <Paragraph>
             I am an ambitious software engineer interested in web development. Even though I have
-            the most experience with full-stack technologies such as React and Node.js, I am always
-            eager to learn and try new things. I enjoy solving real-world problems and coming up
-            with unique solutions to them.
+            the most experience with full-stack technologies such as <InlineCode>React</InlineCode>{' '}
+            and <InlineCode>Node.js</InlineCode>, I am always eager to learn and try new things. I
+            enjoy solving real-world problems and coming up with unique solutions to them.
           </Paragraph>
         </Section>
 
+        <Divider />
+
         <Section>
           <Header>Education</Header>
-          <div className="leading-snug">
+          <div className="space-y-0.5">
             <Subheader>Tampere University of Applied Sciences</Subheader>
             <Paragraph>Bachelor of Engineering, Software Engineering</Paragraph>
             <Paragraph dim>2021 - (2025)</Paragraph>
           </div>
         </Section>
 
+        <Divider />
+
         <Section>
           <Header>Work experience</Header>
-          <div className="space-y-1">
-            <div className="leading-snug">
-              <Subheader>Tampere University of Applied Sciences</Subheader>
-              <Paragraph dim>05/2022</Paragraph>
-            </div>
+          <div className="space-y-0.5">
+            <Subheader>Tampere University of Applied Sciences</Subheader>
+            <Paragraph dim>05/2022</Paragraph>
             <Paragraph>
               During my month-long internship at Tampere University of Applied Sciences, I created a{' '}
               <InlineLink href="https://chat.miikkay.com" external>
@@ -71,11 +75,13 @@ const Home: NextPage = () => {
           </div>
         </Section>
 
+        <Divider />
+
         <Section>
           <Header>Skills</Header>
           {skills.map((category) => {
             return (
-              <div key={category.header}>
+              <div key={category.header} className="space-y-0.5">
                 <Subheader>{category.header}</Subheader>
                 <ul className="flex flex-wrap -m-1 mt-0">
                   {category.list.map((item) => (
@@ -86,6 +92,8 @@ const Home: NextPage = () => {
             );
           })}
         </Section>
+
+        <Divider />
 
         <Section>
           <Header>Projects</Header>

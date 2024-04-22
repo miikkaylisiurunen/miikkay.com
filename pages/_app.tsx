@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import { Inter, Fira_Code } from 'next/font/google';
+import { Inter, Roboto_Mono } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import '@/styles/globals.css';
 
@@ -8,16 +8,16 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const firaCode = Fira_Code({
+const robotoMono = Roboto_Mono({
   subsets: ['latin'],
-  variable: '--font-fira-code',
+  variable: '--font-roboto-mono',
   adjustFontFallback: false,
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class" disableTransitionOnChange>
-      <div className={`${inter.variable} ${firaCode.variable} font-sans`}>
+      <div className={`${inter.variable} ${robotoMono.variable} font-sans`}>
         <Component {...pageProps} />
       </div>
     </ThemeProvider>
