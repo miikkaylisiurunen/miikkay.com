@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import { Analytics } from '@vercel/analytics/react';
 import { Inter, Roboto_Mono } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import '@/styles/globals.css';
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className={`${inter.variable} ${robotoMono.variable} font-sans`}>
         <Component {...pageProps} />
       </div>
+      <Analytics />
     </ThemeProvider>
   );
 }
