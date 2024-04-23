@@ -62,15 +62,17 @@ const Home: NextPage = () => {
         <Section>
           <Header>Work experience</Header>
           <div className="space-y-0.5">
-            <Subheader>Tampere University of Applied Sciences</Subheader>
-            <Paragraph dim>05/2022</Paragraph>
+            <Subheader>Sofia Digital</Subheader>
+            <Paragraph dim>Software Engineer, 05/2023 - present</Paragraph>
             <Paragraph>
-              During my month-long internship at Tampere University of Applied Sciences, I created a{' '}
-              <InlineLink href="https://chat.miikkay.com" external>
-                real-time messaging service
-              </InlineLink>{' '}
-              I had designed. The frontend is written in React and uses Socket.io for handling
-              messages. The backend is written in Node.js using Express, PostgreSQL, and Socket.io.
+              At{' '}
+              <InlineLink href="https://sofiadigital.com" external>
+                Sofia Digital
+              </InlineLink>
+              , I get to build software for various platforms, including TVs, browsers, and mobile
+              devices. My work mainly includes frontend development using well-known web
+              technologies to create engaging user experiences that perform well across all target
+              devices and platforms.
             </Paragraph>
           </div>
         </Section>
@@ -79,6 +81,10 @@ const Home: NextPage = () => {
 
         <Section>
           <Header>Skills</Header>
+          <Paragraph>
+            This is not a comprehensive list of all the technologies I have used, but rather a
+            selection of the ones I have the most experience with.
+          </Paragraph>
           {skills.map((category) => {
             return (
               <div key={category.header} className="space-y-0.5">

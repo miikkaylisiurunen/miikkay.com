@@ -1,43 +1,49 @@
 [
   {
     "name": "Node.js API template",
-    "description": "A Node.js API template with Express, TypeScript and PostgreSQL.",
-    "tech": ["Express", "PostgreSQL", "TypeScript", "Docker", "Jest"],
+    "description": "A Node.js API template with Express, TypeScript and PostgreSQL",
+    "tech": ["Express", "PostgreSQL", "TypeScript", "Docker", "Jest", "Github Actions"],
     "link": "https://github.com/miikkaylisiurunen/template-node-express"
   },
   {
+    "name": "HTTP Status API",
+    "description": "A simple API for simulating and testing application behavior with different HTTP status codes",
+    "tech": ["Next.js"],
+    "link": "https://github.com/miikkaylisiurunen/http-status-api"
+  },
+  {
     "name": "Chat app",
-    "description": "Real-time messaging service with one-on-one conversations, account creation and message history.",
+    "description": "Real-time messaging service with one-on-one conversations, account creation and message history",
     "tech": ["React", "Express", "PostgreSQL", "WebSocket"],
     "link": "https://chat.miikkay.com"
   },
   {
     "name": "Image sharing site",
-    "description": "A photo-sharing site with user accounts and image uploads.",
+    "description": "A photo-sharing site with user accounts and image uploads",
     "tech": ["React", "Express", "MongoDB"],
     "link": "https://images.miikkay.com"
   },
   {
     "name": "Airdate",
-    "description": "Stay up-to-date with the schedule of your favorite TV shows.",
+    "description": "Stay up-to-date with the schedule of your favorite TV shows",
     "tech": ["React", "Express", "PostgreSQL"],
     "link": "https://airdate.miikkay.com"
   },
   {
     "name": "Secure text sharing",
-    "description": "Create secure links to share password-protected text content.",
+    "description": "Create secure links to share password-protected text content",
     "tech": ["React", "Express", "MongoDB"],
     "link": "https://message.miikkay.com"
   },
   {
     "name": "Movie tracker",
-    "description": "Track your watched movies and shows with ratings and notes.",
+    "description": "Track your watched movies and shows with ratings and notes",
     "tech": ["React", "Express", "MongoDB"],
     "link": "https://watcheo.miikkay.com"
   },
   {
     "name": "miikkay.com",
-    "description": "My portfolio built with Next.js and Tailwind CSS.",
+    "description": "My portfolio built with Next.js and Tailwind CSS",
     "tech": ["Next.js"],
     "link": "https://github.com/miikkaylisiurunen/miikkay.com"
   }

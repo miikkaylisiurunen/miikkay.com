@@ -5,10 +5,20 @@
   },
   {
     "header": "Libraries",
-    "list": ["React", "Express", "Next.js", "node-postgres", "Jest", "Tailwind CSS", "Mongoose"]
+    "list": [
+      "React",
+      "Express",
+      "Next.js",
+      "Vue",
+      "React Native",
+      "Jest",
+      "Tailwind CSS",
+      "node-postgres",
+      "Mongoose"
+    ]
   },
   {
     "header": "Others",
-    "list": ["PostgreSQL", "Git", "Docker", "MongoDB", "WebSocket", "Figma"]
+    "list": ["PostgreSQL", "Git", "Docker", "MongoDB", "Github Actions", "WebSocket", "Figma"]
   }
 ]
