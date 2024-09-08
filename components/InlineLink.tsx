@@ -7,7 +7,8 @@ type Props = {
 };
 
 const InlineLink = ({ href, external, children }: Props) => {
-  const className = 'text-zinc-800 dark:text-zinc-300 underline dark:decoration-zinc-300/50';
+  const className =
+    'text-zinc-800 dark:text-zinc-300 underline decoration-zinc-400 dark:decoration-zinc-300/50';
 
   if (external) {
     return (

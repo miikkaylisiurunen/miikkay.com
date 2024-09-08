@@ -1,24 +1,24 @@
 import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
-import { Inter, Roboto_Mono } from 'next/font/google';
+import { Inter as FontSans, Roboto_Mono as FontMono } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import '@/styles/globals.css';
 
-const inter = Inter({
+const fontSans = FontSans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-sans',
 });
 
-const robotoMono = Roboto_Mono({
+const fontMono = FontMono({
   subsets: ['latin'],
-  variable: '--font-roboto-mono',
+  variable: '--font-mono',
   adjustFontFallback: false,
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class" disableTransitionOnChange>
-      <div className={`${inter.variable} ${robotoMono.variable} font-sans`}>
+      <div className={`${fontSans.variable} ${fontMono.variable} font-sans`}>
         <Component {...pageProps} />
       </div>
       <Analytics />

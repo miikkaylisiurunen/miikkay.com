@@ -6,6 +6,12 @@
     "link": "https://github.com/miikkaylisiurunen/template-node-express"
   },
   {
+    "name": "Online marketplace",
+    "description": "Online marketplace where users can list products for sale and ask questions about them",
+    "tech": ["React", "Express", "TypeScript", "PostgreSQL", "Github Actions"],
+    "link": "https://marketplace.miikkay.com"
+  },
+  {
     "name": "HTTP Status API",
     "description": "A simple API for simulating and testing application behavior with different HTTP status codes",
     "tech": ["Next.js"],
@@ -16,6 +22,12 @@
     "description": "Real-time messaging service with one-on-one conversations, account creation and message history",
     "tech": ["React", "Express", "PostgreSQL", "WebSocket"],
     "link": "https://chat.miikkay.com"
+  },
+  {
+    "name": "Slugi",
+    "description": "Command-line tool to transform strings into web-friendly slugs",
+    "tech": ["Node.js"],
+    "link": "https://github.com/miikkaylisiurunen/slugi"
   },
   {
     "name": "Image sharing site",
@@ -39,7 +51,7 @@
     "name": "Movie tracker",
     "description": "Track your watched movies and shows with ratings and notes",
     "tech": ["React", "Express", "MongoDB"],
-    "link": "https://watcheo.miikkay.com"
+    "link": "https://movie-tracker.miikkay.com"
   },
   {
     "name": "miikkay.com",

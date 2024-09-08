@@ -1,9 +1,11 @@
-type Props = {
-  children: React.ReactNode;
-};
+import { HTMLAttributes } from 'react';
 
-const Section = ({ children }: Props) => {
-  return <section className="space-y-4">{children}</section>;
+const Section = ({ children, ...rest }: HTMLAttributes<HTMLElement>) => {
+  return (
+    <section className="space-y-5" {...rest}>
+      {children}
+    </section>
+  );
 };
 
 export default Section;

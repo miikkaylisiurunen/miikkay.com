@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" className="scroll-smooth">
       <Head>
         <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
         <link rel="shortcut icon" href="/static/favicon.ico" />
@@ -12,7 +12,7 @@ export default function Document() {
         <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#2d89ef" />
         <meta name="msapplication-TileColor" content="#2d89ef" />
       </Head>
-      <body className="bg-gray-50 dark:bg-background antialiased">
+      <body className="bg-gray-50 dark:bg-black antialiased">
         <Main />
         <NextScript />
       </body>

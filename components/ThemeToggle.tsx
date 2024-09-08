@@ -12,8 +12,9 @@ const ThemeToggle = () => {
 
   return (
     <button
-      className="cursor-pointer text-zinc-400 bg-white p-2.5 border border-gray-300 hover:border-zinc-400 hover:bg-gray-50 dark:border-zinc-400/20 rounded-lg dark:bg-cardBackground dark:hover:bg-cardBackground-lighter dark:hover:border-zinc-600 transition-colors"
+      className="cursor-pointer text-zinc-500 bg-white p-2.5 border border-gray-300 hover:border-zinc-400 hover:bg-gray-50 dark:border-neutral-800 rounded-lg dark:bg-neutral-950 dark:hover:bg-neutral-900 transition-colors"
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+      aria-label="Toggle theme"
     >
       {resolvedTheme === 'dark' ? (
         <MoonIcon className="w-5 h-5" />

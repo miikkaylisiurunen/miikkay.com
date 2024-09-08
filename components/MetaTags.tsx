@@ -26,7 +26,7 @@ const MetaTags = (props: Props) => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         name="theme-color"
-        content={resolvedTheme === 'dark' ? 'rgb(12,14,17)' : 'rgb(249,250,251)'}
+        content={resolvedTheme === 'dark' ? 'rgb(0,0,0)' : 'rgb(249,250,251)'}
       />
       {meta.openGraph && (
         <>

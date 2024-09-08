@@ -7,9 +7,9 @@ const Subheader = ({ children, ellipsis }: Props) => {
   const ellipsisClasses = ellipsis ? 'text-ellipsis overflow-hidden whitespace-nowrap' : '';
 
   return (
-    <h4 className={`font-medium text-zinc-700 dark:text-zinc-300 text-base ${ellipsisClasses}`}>
+    <h3 className={`font-semibold text-zinc-700 dark:text-zinc-300 text-base ${ellipsisClasses}`}>
       {children}
-    </h4>
+    </h3>
   );
 };
 
