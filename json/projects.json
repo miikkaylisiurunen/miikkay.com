@@ -36,24 +36,6 @@
     "link": "https://images.miikkay.com"
   },
   {
-    "name": "Airdate",
-    "description": "Stay up-to-date with the schedule of your favorite TV shows",
-    "tech": ["React", "Express", "PostgreSQL"],
-    "link": "https://airdate.miikkay.com"
-  },
-  {
-    "name": "Secure text sharing",
-    "description": "Create secure links to share password-protected text content",
-    "tech": ["React", "Express", "MongoDB"],
-    "link": "https://message.miikkay.com"
-  },
-  {
-    "name": "Movie tracker",
-    "description": "Track your watched movies and shows with ratings and notes",
-    "tech": ["React", "Express", "MongoDB"],
-    "link": "https://movie-tracker.miikkay.com"
-  },
-  {
     "name": "miikkay.com",
     "description": "My portfolio built with Next.js and Tailwind CSS",
     "tech": ["Next.js"],
