@@ -2,7 +2,7 @@
   {
     "name": "Node.js API template",
     "description": "A Node.js API template with Express, TypeScript and PostgreSQL",
-    "tech": ["Express", "PostgreSQL", "TypeScript", "Docker", "Jest", "Github Actions"],
+    "tech": ["Express", "PostgreSQL", "TypeScript", "Docker", "Vitest", "Github Actions"],
     "link": "https://github.com/miikkaylisiurunen/template-node-express"
   },
   {
@@ -12,22 +12,16 @@
     "link": "https://marketplace.miikkay.com"
   },
   {
-    "name": "HTTP Status API",
-    "description": "A simple API for simulating and testing application behavior with different HTTP status codes",
-    "tech": ["Next.js"],
-    "link": "https://github.com/miikkaylisiurunen/http-status-api"
-  },
-  {
     "name": "Chat app",
     "description": "Real-time messaging service with one-on-one conversations, account creation and message history",
     "tech": ["React", "Express", "PostgreSQL", "WebSocket"],
     "link": "https://chat.miikkay.com"
   },
   {
-    "name": "Slugi",
-    "description": "Command-line tool to transform strings into web-friendly slugs",
-    "tech": ["Node.js"],
-    "link": "https://github.com/miikkaylisiurunen/slugi"
+    "name": "AI Image Rename",
+    "description": "Command-line tool to automatically rename images based on their content for better organization",
+    "tech": ["Node.js", "Github Actions"],
+    "link": "https://github.com/miikkaylisiurunen/ai-image-rename"
   },
   {
     "name": "Image sharing site",

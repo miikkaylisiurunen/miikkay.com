@@ -1,7 +1,18 @@
 [
   {
     "header": "Languages",
-    "list": ["JavaScript / Node.js", "TypeScript", "HTML", "CSS", "Sass", "SQL", "C++", "Python"]
+    "list": [
+      "JavaScript / Node.js",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Sass",
+      "SQL",
+      "C++",
+      "Python",
+      "Swift",
+      "Dart"
+    ]
   },
   {
     "header": "Libraries",
@@ -12,13 +23,25 @@
       "Vue",
       "React Native",
       "Jest",
+      "Vitest",
       "Tailwind CSS",
       "node-postgres",
-      "Mongoose"
+      "Mongoose",
+      "SwiftUI",
+      "Flutter"
     ]
   },
   {
     "header": "Others",
-    "list": ["PostgreSQL", "Git", "Docker", "MongoDB", "Github Actions", "WebSocket", "Figma"]
+    "list": [
+      "PostgreSQL",
+      "Git",
+      "Docker",
+      "MongoDB",
+      "Github Actions",
+      "Redis",
+      "WebSocket",
+      "Figma"
+    ]
   }
 ]

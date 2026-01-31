@@ -28,9 +28,9 @@ const Home: NextPage = () => {
             <Paragraph>Software Engineer</Paragraph>
           </div>
           <Paragraph>
-            I am an ambitious software engineer interested in web development. Even though I have
-            the most experience with full-stack technologies such as <InlineCode>React</InlineCode>{' '}
-            and <InlineCode>Node.js</InlineCode>, I am always eager to learn and try new things. I
+            I am an ambitious software engineer interested in web development. I have the most
+            experience with full-stack technologies such as <InlineCode>React</InlineCode> and{' '}
+            <InlineCode>Node.js</InlineCode>, and I am always eager to learn and try new things. I
             enjoy solving real-world problems and coming up with unique solutions to them.
           </Paragraph>
         </Section>
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
           <div className="space-y-0.5">
             <Subheader>Tampere University of Applied Sciences</Subheader>
             <Paragraph>Bachelor of Engineering, Software Engineering</Paragraph>
-            <Paragraph dim>2021 - (2025)</Paragraph>
+            <Paragraph dim>2021 - 2025</Paragraph>
           </div>
         </Section>
 
@@ -87,6 +87,13 @@ const Home: NextPage = () => {
 
         <Section id="projects">
           <Header>Projects</Header>
+          <Paragraph>
+            This list only includes a selection of my personal projects. You can find more on my{' '}
+            <InlineLink href="https://github.com/miikkaylisiurunen" external>
+              GitHub
+            </InlineLink>
+            .
+          </Paragraph>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {projects.map((project) => {
               return <ProjectCard key={project.name} details={project} />;
