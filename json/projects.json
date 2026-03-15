@@ -6,6 +6,12 @@
     "link": "https://github.com/miikkaylisiurunen/template-node-express"
   },
   {
+    "name": "Kaiku",
+    "description": "macOS menu bar app to record mic audio and transcribe it, with drag-and-drop audio/video file support",
+    "tech": ["Swift", "SwiftUI"],
+    "link": "https://github.com/miikkaylisiurunen/kaiku"
+  },
+  {
     "name": "Online marketplace",
     "description": "Online marketplace where users can list products for sale and ask questions about them",
     "tech": ["React", "Express", "TypeScript", "PostgreSQL", "Github Actions"],
