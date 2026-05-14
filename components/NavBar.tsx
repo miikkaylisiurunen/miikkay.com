@@ -35,7 +35,7 @@ const NavBar = () => {
       </nav>
       <div className="flex space-x-4">
         <a
-          className="text-zinc-500 bg-white p-2.5 border border-gray-300 hover:border-zinc-400 hover:bg-gray-50 dark:border-neutral-800 rounded-lg dark:bg-neutral-950 dark:hover:bg-neutral-900 transition-colors"
+          className="text-zinc-500 bg-white p-2.5 border border-gray-300 hover:border-zinc-400 hover:bg-gray-50 dark:border-neutral-800 rounded-xl dark:bg-neutral-950 dark:hover:bg-neutral-900 transition-colors"
           href="https://github.com/miikkaylisiurunen"
           target="_blank"
           rel="noreferrer"

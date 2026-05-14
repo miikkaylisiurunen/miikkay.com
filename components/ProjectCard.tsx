@@ -47,7 +47,7 @@ const ProjectCard = ({ details }: Props) => {
 
   return (
     <a
-      className="relative p-6 space-y-6 rounded-lg flex flex-1 flex-col justify-between cursor-pointer overflow-hidden bg-white dark:bg-neutral-950 border border-gray-300 dark:border-neutral-800 ease-out duration-150 group"
+      className="relative p-6 space-y-6 rounded-xl flex flex-1 flex-col justify-between cursor-pointer overflow-hidden bg-white dark:bg-neutral-950 border border-gray-300 dark:border-neutral-800 ease-out duration-150 group"
       href={details.link}
       target="_blank"
       rel="noreferrer"
@@ -69,7 +69,7 @@ const ProjectCard = ({ details }: Props) => {
         {details.tech.map((tech) => (
           <span
             key={tech}
-            className="bg-gray-100 dark:bg-neutral-800 rounded px-1.5 py-0.5 inline-block m-1"
+            className="bg-gray-100 dark:bg-neutral-800 rounded-sm px-1.5 py-0.5 inline-block m-1"
           >
             {tech}
           </span>
