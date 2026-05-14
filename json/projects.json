@@ -1,9 +1,15 @@
 [
   {
     "name": "Node.js API template",
-    "description": "A Node.js API template with Express, TypeScript and PostgreSQL",
-    "tech": ["Express", "PostgreSQL", "TypeScript", "Docker", "Vitest", "Github Actions"],
+    "description": "Node.js API template with Express, TypeScript and PostgreSQL",
+    "tech": ["Express", "PostgreSQL", "TypeScript", "Docker", "Vitest", "GitHub Actions"],
     "link": "https://github.com/miikkaylisiurunen/template-node-express"
+  },
+  {
+    "name": "Konttivahti",
+    "description": "Monitor running Docker containers for image updates, with notifications and a dashboard",
+    "tech": ["React", "Node.js", "TypeScript", "Docker", "Vitest", "GitHub Actions"],
+    "link": "https://github.com/miikkaylisiurunen/konttivahti"
   },
   {
     "name": "Kaiku",
@@ -14,7 +20,7 @@
   {
     "name": "Online marketplace",
     "description": "Online marketplace where users can list products for sale and ask questions about them",
-    "tech": ["React", "Express", "TypeScript", "PostgreSQL", "Github Actions"],
+    "tech": ["React", "Express", "TypeScript", "PostgreSQL", "GitHub Actions"],
     "link": "https://marketplace.miikkay.com"
   },
   {
@@ -25,8 +31,8 @@
   },
   {
     "name": "AI Image Rename",
-    "description": "Command-line tool to automatically rename images based on their content for better organization",
-    "tech": ["Node.js", "Github Actions"],
+    "description": "Command-line tool to automatically rename images based on their content",
+    "tech": ["Node.js", "GitHub Actions"],
     "link": "https://github.com/miikkaylisiurunen/ai-image-rename"
   },
   {
