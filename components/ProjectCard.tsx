@@ -1,3 +1,5 @@
+'use client';
+
 import { useRef } from 'react';
 import Subheader from './Subheader';
 import { GithubIcon, LinkIcon } from './Icons';
@@ -74,7 +76,7 @@ const ProjectCard = ({ details }: Props) => {
         ))}
       </div>
       <div
-        className="absolute w-full h-full left-0 top-0 !m-0 duration-150 transition-opacity ease-out pointer-events-none opacity-0 motion-safe:group-hover:opacity-100"
+        className="absolute w-full h-full left-0 top-0 m-0! duration-150 transition-opacity ease-out pointer-events-none opacity-0 motion-safe:group-hover:opacity-100"
         ref={glowRef}
       ></div>
     </a>

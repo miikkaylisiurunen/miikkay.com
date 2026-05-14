@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { MoonIcon, SunIcon } from './Icons';
@@ -7,6 +9,7 @@ const ThemeToggle = () => {
   const { resolvedTheme, setTheme } = useTheme();
 
   // wait until mounted to avoid hydration mismatch error with `resolvedTheme` being undefined
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 

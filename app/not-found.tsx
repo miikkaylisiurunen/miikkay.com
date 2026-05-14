@@ -1,12 +1,14 @@
+import type { Metadata } from 'next';
 import InlineLink from '@/components/InlineLink';
 import Paragraph from '@/components/Paragraph';
-import MetaTags from '@/components/MetaTags';
 
-export default function Custom404() {
+export const metadata: Metadata = {
+  title: 'Page not found',
+};
+
+export default function NotFound() {
   return (
     <div className="h-screen flex flex-col items-center justify-center p-6">
-      <MetaTags title="Page not found" description="" openGraph={false} />
-
       <div className="space-y-6">
         <div className="flex space-x-5 justify-center items-center">
           <h1 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-200">404</h1>

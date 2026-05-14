@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import Section from '@/components/Section';
 import Paragraph from '@/components/Paragraph';
 import Header from '@/components/Header';
@@ -8,15 +7,12 @@ import Subheader from '@/components/Subheader';
 import skills from '@/json/skills.json';
 import projects from '@/json/projects.json';
 import InlineLink from '@/components/InlineLink';
-import MetaTags from '@/components/MetaTags';
 import InlineCode from '@/components/InlineCode';
 import NavBar from '@/components/NavBar';
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <div className="flex justify-center py-8 px-8 sm:py-14 sm:px-12 md:py-20 relative">
-      <MetaTags />
-
       <main className="max-w-3xl flex flex-col space-y-14 sm:space-y-20">
         <NavBar />
 
@@ -103,6 +99,4 @@ const Home: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default Home;
+}
