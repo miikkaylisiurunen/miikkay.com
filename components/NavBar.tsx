@@ -33,7 +33,7 @@ const NavBar = () => {
           projects
         </a>
       </nav>
-      <div className="flex space-x-4">
+      <div className="flex xs:flex-row-reverse gap-4">
         <a
           className="text-zinc-500 bg-white p-2.5 border border-gray-300 hover:border-zinc-400 hover:bg-gray-50 dark:border-neutral-800 rounded-xl dark:bg-neutral-950 dark:hover:bg-neutral-900 transition-colors"
           href="https://github.com/miikkaylisiurunen"
