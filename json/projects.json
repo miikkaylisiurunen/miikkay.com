@@ -18,15 +18,17 @@
     "link": "https://github.com/miikkaylisiurunen/kaiku"
   },
   {
-    "name": "Online marketplace",
-    "description": "Online marketplace where users can list products for sale and ask questions about them",
+    "name": "Online Marketplace (2024)",
+    "archived": true,
+    "description": "An online marketplace where users can list products for sale and ask questions about them, built as the final assignment for a course",
     "tech": ["React", "Express", "TypeScript", "PostgreSQL", "GitHub Actions"],
     "link": "https://marketplace.miikkay.com"
   },
   {
-    "name": "Chat app",
+    "name": "Chat App (2022)",
+    "archived": true,
     "description": "Real-time messaging service with one-on-one conversations, account creation and message history",
-    "tech": ["React", "Express", "PostgreSQL", "WebSocket"],
+    "tech": ["React", "Express", "TypeScript", "PostgreSQL", "WebSocket"],
     "link": "https://chat.miikkay.com"
   },
   {
@@ -36,7 +38,8 @@
     "link": "https://github.com/miikkaylisiurunen/ai-image-rename"
   },
   {
-    "name": "Image sharing site",
+    "name": "Image Sharing Site (2021)",
+    "archived": true,
     "description": "A photo-sharing site with user accounts and image uploads",
     "tech": ["React", "Express", "MongoDB"],
     "link": "https://images.miikkay.com"

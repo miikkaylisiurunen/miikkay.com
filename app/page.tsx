@@ -9,6 +9,7 @@ import projects from '@/json/projects.json';
 import InlineLink from '@/components/InlineLink';
 import InlineCode from '@/components/InlineCode';
 import NavBar from '@/components/NavBar';
+import { ChevronRightIcon } from '@/components/Icons';
 
 export default function Home() {
   return (
@@ -91,9 +92,45 @@ export default function Home() {
             .
           </Paragraph>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {projects.map((project) => {
-              return <ProjectCard key={project.name} details={project} />;
-            })}
+            {projects
+              .filter((project) => !project.archived)
+              .map((project) => {
+                return <ProjectCard key={project.name} details={project} />;
+              })}
+          </div>
+          <div className="space-y-3">
+            <details className="group">
+              <summary className="flex w-fit cursor-pointer list-none items-center text-base text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 [&::-webkit-details-marker]:hidden">
+                <ChevronRightIcon className="shrink-0 group-open:rotate-90 mr-1" />
+                Old projects
+              </summary>
+              <div className="mt-3">
+                <Paragraph>
+                  These are some older projects I built that are still deployed in their original
+                  form.
+                </Paragraph>
+              </div>
+              <div className="mt-4 space-y-6">
+                {projects
+                  .filter((project) => project.archived)
+                  .map((project) => (
+                    <div key={project.name}>
+                      <InlineLink href={project.link} external>
+                        {project.name}
+                      </InlineLink>
+                      <Paragraph>{project.description}</Paragraph>
+                      <div className="flex flex-wrap font-mono text-sm text-zinc-500">
+                        {project.tech.map((tech, index) => (
+                          <span key={tech} className="flex">
+                            <span>{tech}</span>
+                            {index < project.tech.length - 1 && <span className="mx-1.5">•</span>}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </details>
           </div>
         </Section>
       </main>

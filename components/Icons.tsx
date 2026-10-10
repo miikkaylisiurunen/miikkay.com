@@ -2,7 +2,7 @@ type Props = {
   className?: string;
 };
 
-export const LinkIcon = ({ className }: Props) => {
+export const LinkIcon = ({ className = '' }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,7 @@ export const LinkIcon = ({ className }: Props) => {
   );
 };
 
-export const GithubIcon = ({ className }: Props) => {
+export const GithubIcon = ({ className = '' }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export const GithubIcon = ({ className }: Props) => {
   );
 };
 
-export const SunIcon = ({ className }: Props) => {
+export const SunIcon = ({ className = '' }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ export const SunIcon = ({ className }: Props) => {
   );
 };
 
-export const MoonIcon = ({ className }: Props) => {
+export const MoonIcon = ({ className = '' }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -71,6 +71,25 @@ export const MoonIcon = ({ className }: Props) => {
       className={`w-5 h-5 ${className}`}
     >
       <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+    </svg>
+  );
+};
+
+export const ChevronRightIcon = ({ className = '' }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`w-4 h-4 ${className}`}
+    >
+      <path d="m9 18 6-6-6-6" />
     </svg>
   );
 };
