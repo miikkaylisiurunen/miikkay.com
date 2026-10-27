@@ -1,0 +1,48 @@
+---
+import GithubIcon from './GithubIcon.astro';
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<div class="flex justify-between items-start xs:flex-row xs:items-center xs:space-y-0 flex-col space-y-4 font-normal text-zinc-600 dark:text-zinc-400">
+  <nav class="flex flex-wrap *:mr-1 xs:*:mr-1.5">
+    <a
+      href="#work"
+      class="hover:text-zinc-800 dark:hover:text-zinc-300 transition-colors duration-100"
+    >
+      work
+    </a>
+    <span class="opacity-40 select-none">/</span>
+    <a
+      href="#education"
+      class="hover:text-zinc-800 dark:hover:text-zinc-300 transition-colors duration-100"
+    >
+      education
+    </a>
+    <span class="opacity-40 select-none">/</span>
+    <a
+      href="#skills"
+      class="hover:text-zinc-800 dark:hover:text-zinc-300 transition-colors duration-100"
+    >
+      skills
+    </a>
+    <span class="opacity-40 select-none">/</span>
+    <a
+      href="#projects"
+      class="hover:text-zinc-800 dark:hover:text-zinc-300 transition-colors duration-100"
+    >
+      projects
+    </a>
+  </nav>
+  <div class="flex xs:flex-row-reverse gap-4">
+    <a
+      class="text-zinc-500 bg-white p-2.5 border border-gray-300 hover:border-zinc-400 hover:bg-gray-50 dark:border-neutral-800 rounded-xl dark:bg-neutral-950 dark:hover:bg-neutral-900 transition-colors"
+      href="https://github.com/miikkaylisiurunen"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="GitHub"
+    >
+      <GithubIcon />
+    </a>
+    <ThemeToggle />
+  </div>
+</div>

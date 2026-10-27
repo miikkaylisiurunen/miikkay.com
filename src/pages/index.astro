@@ -1,0 +1,219 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Paragraph from '../components/Paragraph.astro';
+import Header from '../components/Header.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Subheader from '../components/Subheader.astro';
+import InlineLink from '../components/InlineLink.astro';
+import InlineCode from '../components/InlineCode.astro';
+import NavBar from '../components/NavBar.astro';
+import ChevronRightIcon from '../components/ChevronRightIcon.astro';
+import ArchivedProject from '../components/ArchivedProject.astro';
+import SkillPill from '../components/SkillPill.astro';
+
+const skills: { header: string; list: string[] }[] = [
+  {
+    header: 'Languages',
+    list: [
+      'JavaScript / Node.js',
+      'TypeScript',
+      'HTML',
+      'CSS',
+      'Sass',
+      'SQL',
+      'C++',
+      'Python',
+      'Swift',
+      'Dart',
+    ],
+  },
+  {
+    header: 'Libraries',
+    list: [
+      'React',
+      'Express',
+      'Next.js',
+      'Vue',
+      'React Native',
+      'Jest',
+      'Vitest',
+      'Tailwind CSS',
+      'node-postgres',
+      'Mongoose',
+      'SwiftUI',
+      'Flutter',
+    ],
+  },
+  {
+    header: 'Others',
+    list: [
+      'PostgreSQL',
+      'Git',
+      'Docker',
+      'MongoDB',
+      'GitHub Actions',
+      'Redis',
+      'WebSocket',
+      'Figma',
+    ],
+  },
+];
+---
+
+<Layout>
+  <div class="flex justify-center py-8 px-8 sm:py-14 sm:px-12 md:py-20 relative">
+    <main class="max-w-3xl flex flex-col space-y-14 sm:space-y-20">
+      <NavBar />
+
+      <Section>
+        <div>
+          <h1 class="font-bold text-xl tracking-wide text-zinc-800 dark:text-zinc-200">
+            Miikka Ylisiurunen
+          </h1>
+          <Paragraph>Software Engineer</Paragraph>
+        </div>
+        <Paragraph>
+          I am an ambitious software engineer interested in web development. I have the most
+          experience with full-stack technologies such as <InlineCode>React</InlineCode> and
+          <InlineCode>Node.js</InlineCode>, and I am always eager to learn and try new things. I
+          enjoy solving real-world problems and coming up with unique solutions to them.
+        </Paragraph>
+      </Section>
+
+      <Section id="work">
+        <Header>Work experience</Header>
+        <div class="space-y-3">
+          <div class="space-y-0.5">
+            <Subheader>Sofia Digital</Subheader>
+            <Paragraph>Software Engineer</Paragraph>
+            <Paragraph dim>05/2023 - present</Paragraph>
+          </div>
+          <!-- prettier adds whitespace inside the link -->
+          <!-- prettier-ignore -->
+          <Paragraph>
+            At <InlineLink href="https://sofiadigital.com" external>Sofia Digital</InlineLink>, I get to
+            build software for various platforms, including TVs, browsers, and mobile
+            devices. My work mainly includes frontend development using well-known web technologies
+            to create engaging user experiences that perform well across all target devices and
+            platforms.
+          </Paragraph>
+        </div>
+      </Section>
+
+      <Section id="education">
+        <Header>Education</Header>
+        <div class="space-y-0.5">
+          <Subheader>Tampere University of Applied Sciences</Subheader>
+          <Paragraph>Bachelor of Engineering, Software Engineering</Paragraph>
+          <Paragraph dim>2021 - 2025</Paragraph>
+        </div>
+      </Section>
+
+      <Section id="skills">
+        <Header>Skills</Header>
+        <Paragraph>
+          This is not a comprehensive list of all the technologies I have used, but rather a
+          selection of the ones I have the most experience with.
+        </Paragraph>
+        {skills.map((category) => (
+          <div class="space-y-1.5">
+            <Subheader>{category.header}</Subheader>
+            <ul class="flex flex-wrap -m-1 mt-0">
+              {category.list.map((item) => (
+                <SkillPill>{item}</SkillPill>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </Section>
+
+      <Section id="projects">
+        <Header>Projects</Header>
+        <!-- prettier adds whitespace inside the link -->
+        <!-- prettier-ignore -->
+        <Paragraph>
+          This list only includes a selection of my personal projects. You can find more on my
+          <InlineLink href="https://github.com/miikkaylisiurunen" external>GitHub</InlineLink>.
+        </Paragraph>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <ProjectCard
+            name="Node.js API Template"
+            href="https://github.com/miikkaylisiurunen/template-node-express"
+            tech={['Express', 'PostgreSQL', 'TypeScript', 'Docker', 'Vitest', 'GitHub Actions']}
+          >
+            Node.js API template with Express, TypeScript and PostgreSQL
+          </ProjectCard>
+          <ProjectCard
+            name="Konttivahti"
+            href="https://github.com/miikkaylisiurunen/konttivahti"
+            tech={['React', 'Node.js', 'TypeScript', 'Docker', 'Vitest', 'GitHub Actions']}
+          >
+            Monitor running Docker containers for image updates, with notifications and a dashboard
+          </ProjectCard>
+          <ProjectCard
+            name="Kaiku"
+            href="https://github.com/miikkaylisiurunen/kaiku"
+            tech={['Swift', 'SwiftUI']}
+          >
+            macOS menu bar app to record mic audio and transcribe it, with drag-and-drop audio/video
+            file support
+          </ProjectCard>
+          <ProjectCard
+            name="AI Image Rename"
+            href="https://github.com/miikkaylisiurunen/ai-image-rename"
+            tech={['Node.js', 'GitHub Actions']}
+          >
+            Command-line tool to automatically rename images based on their content
+          </ProjectCard>
+          <ProjectCard
+            name="miikkay.com"
+            href="https://github.com/miikkaylisiurunen/miikkay.com"
+            tech={['Astro', 'Tailwind CSS']}
+          >
+            My portfolio built with Astro and Tailwind CSS
+          </ProjectCard>
+        </div>
+        <div class="space-y-3">
+          <details class="group">
+            <summary class="flex w-fit cursor-pointer list-none items-center text-base text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 [&::-webkit-details-marker]:hidden">
+              <ChevronRightIcon class="shrink-0 group-open:rotate-90 mr-1" />
+              Old projects
+            </summary>
+            <div class="mt-3">
+              <Paragraph>
+                These are some older projects I built that are still deployed in their original
+                form.
+              </Paragraph>
+            </div>
+            <div class="mt-4 space-y-6">
+              <ArchivedProject
+                name="Online Marketplace (2024)"
+                href="https://marketplace.miikkay.com"
+                tech={['React', 'Express', 'TypeScript', 'PostgreSQL', 'GitHub Actions']}
+              >
+                An online marketplace where users can list products for sale and ask questions about
+                them, built as the final assignment for a course
+              </ArchivedProject>
+              <ArchivedProject
+                name="Chat App (2022)"
+                href="https://chat.miikkay.com"
+                tech={['React', 'Express', 'TypeScript', 'PostgreSQL', 'WebSocket']}
+              >
+                Real-time messaging service with one-on-one conversations, account creation and
+                message history
+              </ArchivedProject>
+              <ArchivedProject
+                name="Image Sharing Site (2021)"
+                href="https://images.miikkay.com"
+                tech={['React', 'Express', 'MongoDB']}
+              >
+                A photo-sharing site with user accounts and image uploads
+              </ArchivedProject>
+            </div>
+          </details>
+        </div>
+      </Section>
+    </main>
+  </div>
+</Layout>

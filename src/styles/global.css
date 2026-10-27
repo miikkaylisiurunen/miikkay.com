@@ -4,6 +4,9 @@
 
 @theme {
   --breakpoint-xs: 475px;
-  --font-sans: var(--next-font-sans);
-  --font-mono: var(--next-font-mono);
+}
+
+@theme inline {
+  --font-sans: var(--font-family-sans);
+  --font-mono: var(--font-family-mono);
 }

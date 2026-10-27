@@ -1,0 +1,15 @@
+<script is:inline>
+  (() => {
+    let preference = null;
+    try {
+      preference = localStorage.getItem('theme');
+    } catch {
+      // use system theme when storage is unavailable
+    }
+    const dark =
+      preference === 'dark' ||
+      (preference !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    document.documentElement.classList.toggle('dark', dark);
+    document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+  })();
+</script>

@@ -1,0 +1,16 @@
+---
+interface Props {
+  dim?: boolean;
+}
+
+const { dim = false } = Astro.props;
+---
+
+<p
+  class:list={[
+    'text-base font-normal leading-relaxed',
+    dim ? 'text-zinc-500' : 'text-zinc-600 dark:text-zinc-400',
+  ]}
+>
+  <slot />
+</p>
