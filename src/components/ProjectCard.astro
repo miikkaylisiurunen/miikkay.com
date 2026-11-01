@@ -1,0 +1,75 @@
+---
+import Subheader from './Subheader.astro';
+import GithubIcon from './GithubIcon.astro';
+interface Props {
+  name: string;
+  href: string;
+  tech: string[];
+}
+const { name, href, tech } = Astro.props;
+---
+
+<a
+  data-project-card
+  class="group relative p-6 space-y-6 rounded-xl flex flex-col justify-between overflow-hidden bg-white dark:bg-neutral-950 border border-gray-300 dark:border-neutral-800"
+  href={href}
+  target="_blank"
+  rel="noreferrer"
+>
+  <div class="text-zinc-600 dark:text-zinc-400">
+    <div class="flex justify-between gap-2 items-center">
+      <Subheader ellipsis>{name}</Subheader>
+      <span class="shrink-0">
+        {new URL(href).hostname === 'github.com' ? (
+          <GithubIcon />
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="w-5 h-5"
+          >
+            <path d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z" />
+            <path d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z" />
+          </svg>
+        )}
+      </span>
+    </div>
+    <p class="leading-normal text-sm mt-1">
+      <slot />
+    </p>
+  </div>
+  <div class="text-xs text-zinc-600 dark:text-zinc-400 font-mono -m-1">
+    {tech.map((item) => (
+      <span class="bg-gray-100 dark:bg-neutral-800 rounded-sm px-1.5 py-0.5 inline-block m-1">
+        {item}
+      </span>
+    ))}
+  </div>
+  <div class="card-glow absolute inset-0 m-0! duration-150 transition-opacity ease-out pointer-events-none opacity-0 motion-safe:group-hover:opacity-100"></div>
+</a>
+
+<style>
+  .card-glow {
+    --glow-color: rgb(0 0 0 / 0.06);
+    background-image: radial-gradient(
+      circle at var(--glow-x, 50%) var(--glow-y, 50%),
+      var(--glow-color),
+      transparent
+    );
+  }
+
+  :global(.dark) .card-glow {
+    --glow-color: rgb(255 255 255 / 0.04);
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('[data-project-card]').forEach((card) => {
+    card.addEventListener('pointermove', (event) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--glow-x', `${((event.clientX - rect.left) / rect.width) * 100}%`);
+      card.style.setProperty('--glow-y', `${((event.clientY - rect.top) / rect.height) * 100}%`);
+    });
+  });
+</script>

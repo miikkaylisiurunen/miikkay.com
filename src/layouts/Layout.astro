@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+import { Font } from 'astro:assets';
+import { ASSET_VERSION } from 'astro:env/server';
+import ThemeScript from '../components/ThemeScript.astro';
+import openGraphImage from '../assets/opengraph-image.png';
+import appleIcon from '../assets/apple-icon.png';
+
+interface Props {
+  title?: string;
+  description?: string;
+  noindex?: boolean;
+}
+const {
+  title = 'Miikka Ylisiurunen',
+  description = 'Software engineer interested in web development.',
+  noindex = false,
+} = Astro.props;
+
+const socialImage = new URL(openGraphImage.src, Astro.site);
+---
+
+<!doctype html>
+<html lang="en" class="font-sans antialiased scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <ThemeScript />
+    <Font cssVariable="--font-family-sans" preload />
+    <Font cssVariable="--font-family-mono" preload />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" href={`/favicon.ico?v=${ASSET_VERSION}`} sizes="32x32" />
+    <link rel="icon" href={`/favicon.svg?v=${ASSET_VERSION}`} type="image/svg+xml" />
+    <link
+      rel="apple-touch-icon"
+      href={appleIcon.src}
+      sizes={`${appleIcon.width}x${appleIcon.height}`}
+      type="image/png"
+    />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.site} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content={String(openGraphImage.width)} />
+    <meta property="og:image:height" content={String(openGraphImage.height)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="rgb(249,250,251)" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="rgb(0,0,0)" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50 dark:bg-black">
+    <slot />
+  </body>
+</html>

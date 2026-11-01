@@ -1,0 +1,16 @@
+---
+interface Props {
+  ellipsis?: boolean;
+}
+
+const { ellipsis } = Astro.props;
+---
+
+<h3
+  class:list={[
+    'font-semibold text-zinc-700 dark:text-zinc-300 text-base',
+    ellipsis && 'text-ellipsis overflow-hidden whitespace-nowrap',
+  ]}
+>
+  <slot />
+</h3>

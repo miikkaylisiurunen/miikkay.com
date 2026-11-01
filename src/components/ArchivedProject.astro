@@ -1,0 +1,27 @@
+---
+import InlineLink from './InlineLink.astro';
+import Paragraph from './Paragraph.astro';
+interface Props {
+  name: string;
+  href: string;
+  tech: string[];
+}
+const { name, href, tech } = Astro.props;
+---
+
+<div>
+  <InlineLink href={href} external>
+    {name}
+  </InlineLink>
+  <Paragraph>
+    <slot />
+  </Paragraph>
+  <div class="flex flex-wrap font-mono text-sm text-zinc-500">
+    {tech.map((item, index) => (
+      <span>
+        {item}
+        {index < tech.length - 1 && <span class="mx-1.5">•</span>}
+      </span>
+    ))}
+  </div>
+</div>
